@@ -11,7 +11,7 @@ plt.show()
 plt.title('graph num 2')
 a = [10, 2, 6, -3, 12]
 b = [0, 3, 7, 3, 9]
-plt.plot(a, b)
+plt.bar(a, b)
 plt.show()
 
 plt.title('graph num 3')
