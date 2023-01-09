@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from collections import Counter
 
+
 file = open('NASA_access_log_Jul95')
 ip_addresses = []
 
@@ -12,10 +13,11 @@ except:
     print("uh-oh")
 
 ip_counter = Counter(ip_addresses).most_common(10)
+
 ip_values = []
 ip_keys = []
 
-print(ip_addresses)
+
 
 c = Counter(ip_addresses)
 
@@ -29,7 +31,17 @@ for key, value in c.items():
 print(newDict.keys())
 print(newDict.values())
 
-plt.bar(newDict.keys(),newDict.values())
+plt.bar(newDict.keys(),newDict.values(), color=['red', 'black',],)
+plt.xticks(rotation= 30 )
+plt.rcParams['font.size'] = 5
+plt.ylabel("Num of times visited", size=15)
+plt.title("Ip adresses ", size=18)
+
+
+
 plt.show()
+
+
+
 
 
