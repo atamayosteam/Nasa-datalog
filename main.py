@@ -12,7 +12,7 @@ try:
 except:
     print("uh-oh")
 
-ip_counter = Counter(ip_addresses).most_common(10)
+ip_counter = Counter(ip_addresses).most_common(1)
 
 ip_values = []
 ip_keys = []
