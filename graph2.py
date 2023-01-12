@@ -3,9 +3,7 @@ import matplotlib.pyplot as plt
 
 File= open("NASA_access_log_Jul95")
 plt.style.use("dark_background")
-
 dates=[]
-
 try:
     for lines in File:
         time=lines.split(' ')[3]
@@ -25,7 +23,6 @@ date_value=[]
 date_key=[]
 
 fig, ax = plt.subplots()
-
 for z in time_date:
     date_key.append(z[0])
     date_value.append(z[1])
@@ -37,11 +34,9 @@ plt.plot(dateKeys,timevalues,
     )
 
 plt.xticks(rotation=30)
-
 ax.grid(color='red') 
 plt.xlabel("Date")
 plt.ylabel("Searches on Day")
 
 plt.show()
-
 print(f"The most frequent date was {Counter(time).most_common(1)}")
